@@ -38,6 +38,19 @@
     );
   });
 
+  // Timeline
+  const timelineContainer = document.getElementById('timelineContainer');
+  d.timeline.forEach(item => {
+    timelineContainer.insertAdjacentHTML('beforeend',
+      `<div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">${item.date}</div>
+        <h3>${item.title}</h3>
+        <p>${item.desc}</p>
+      </div>`
+    );
+  });
+
   // Contact
   const contactList = document.getElementById('contactList');
   if (d.contact.email) {
