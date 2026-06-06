@@ -19,7 +19,7 @@
   }
 
   // About
-  document.querySelector('.about-text').textContent = d.about.text;
+  document.querySelector('.about-text').innerHTML = d.about.text;
   const eduList = document.querySelector('.education-list');
   d.about.education.forEach(item => {
     eduList.insertAdjacentHTML('beforeend',
@@ -62,18 +62,52 @@
   // Lightbox
   const lb = document.createElement('div');
   lb.className = 'lightbox';
-  lb.innerHTML = '<img src="" alt="">';
+  lb.innerHTML = '<button class="lightbox-arrow lightbox-prev"><i data-lucide="chevron-left" size="28"></i></button><img src="" alt=""><button class="lightbox-arrow lightbox-next"><i data-lucide="chevron-right" size="28"></i></button>';
   document.body.appendChild(lb);
 
-  lb.addEventListener('click', function () {
-    lb.classList.remove('open');
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') lb.classList.remove('open');
+  const lbImg = lb.querySelector('img');
+  const lbPrev = lb.querySelector('.lightbox-prev');
+  const lbNext = lb.querySelector('.lightbox-next');
+
+  let currentGroup = [];
+  let currentIndex = 0;
+
+  function showImage(index) {
+    currentIndex = index;
+    lbImg.src = currentGroup[currentIndex];
+  }
+
+  function nextImage() { showImage((currentIndex + 1) % currentGroup.length); }
+  function prevImage() { showImage((currentIndex - 1 + currentGroup.length) % currentGroup.length); }
+
+  lbNext.addEventListener('click', function (e) { e.stopPropagation(); nextImage(); });
+  lbPrev.addEventListener('click', function (e) { e.stopPropagation(); prevImage(); });
+
+  lb.addEventListener('click', function (e) {
+    if (e.target === lb || e.target === lbImg) lb.classList.remove('open');
   });
 
-  window.openLightbox = function (src) {
-    lb.querySelector('img').src = src;
+  document.addEventListener('keydown', function (e) {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') lb.classList.remove('open');
+    if (e.key === 'ArrowRight') nextImage();
+    if (e.key === 'ArrowLeft') prevImage();
+  });
+
+  // 点击图片时收集同组图片并打开
+  document.addEventListener('click', function (e) {
+    const img = e.target.closest('.project-image img, .timeline-images img');
+    if (!img) return;
+
+    const container = img.closest('.project-image') || img.closest('.timeline-images');
+    if (!container) return;
+
+    const allImgs = container.querySelectorAll('img');
+    currentGroup = Array.from(allImgs).map(el => el.src);
+    currentIndex = currentGroup.indexOf(img.src);
+    if (currentIndex < 0) currentIndex = 0;
+
+    lbImg.src = currentGroup[currentIndex];
     lb.classList.add('open');
-  };
+  });
 })();

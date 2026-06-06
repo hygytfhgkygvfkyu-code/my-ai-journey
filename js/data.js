@@ -8,19 +8,18 @@ const siteData = {
   },
 
   about: {
-    text: "天津商业大学本科在读，主修高等数学、概率论与数理统计、经济学原理、会计学、财务管理、市场营销、客户关系管理、招商引资概论、互联网+招商引资运营服务等课程，曾参加谷川培训学校TTT专项培训。我认为，AI 的意义不止于蒸汽机、电力、互联网那样的效率革命，它更是一场人类思维方式的变革。",
+    text: "天津商业大学本科在读，主修高等数学、概率论与数理统计、经济学原理、会计学、财务管理、市场营销、客户关系管理、招商引资概论、互联网+招商引资运营服务等课程，曾参加谷川培训学校TTT专项培训。<br><span style=\"color:var(--color-primary);font-weight:500;\">我认为，AI 的意义不止于蒸汽机、电力、互联网那样的效率革命，它更是一场人类思维方式的变革。</span>",
     education: [
       { school: "天津商业大学", degree: "本科", major: "经济学/商科", time: "在读" }
     ]
   },
 
   skills: [
-    { name: "AI 应用开发", level: 85 },
-    { name: "Prompt Engineering", level: 80 },
-    { name: "HTML / CSS / JS", level: 75 },
-    { name: "飞书机器人开发", level: 80 },
-    { name: "扣子平台", level: 85 },
-    { name: "Claude Code", level: 90 }
+    { name: "AI 辅助开发", level: 85 },
+    { name: "VSCode + Claude Code", level: 80 },
+    { name: "飞书/扣子 Bot 搭建", level: 75 },
+    { name: "网站搭建", level: 75 },
+    { name: "AI 信息获取与学习", level: 85 }
   ],
 
   timeline: [
