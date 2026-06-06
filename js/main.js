@@ -58,4 +58,22 @@
 
   // Re-init Lucide icons (for dynamic elements)
   if (window.lucide) lucide.createIcons();
+
+  // Lightbox
+  const lb = document.createElement('div');
+  lb.className = 'lightbox';
+  lb.innerHTML = '<img src="" alt="">';
+  document.body.appendChild(lb);
+
+  lb.addEventListener('click', function () {
+    lb.classList.remove('open');
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') lb.classList.remove('open');
+  });
+
+  window.openLightbox = function (src) {
+    lb.querySelector('img').src = src;
+    lb.classList.add('open');
+  };
 })();

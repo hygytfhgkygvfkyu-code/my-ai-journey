@@ -1,8 +1,8 @@
 <!--
 type: timeline
 -->
-- **2023** | **开始关注 AI** — 通过公众号、AI 社群等渠道获取 AI 前沿资讯，建立信息输入体系 | assets/images/timeline-info.jpg
-- **2024 初** | **系统化学习** — 通过 waytoagi、YouTube/B站订阅、凤九歌公众号等渠道深度学习 AI 知识与实践 | assets/images/timeline-waytoagi.jpg, assets/images/timeline-bilibili.jpg
+- **2023** | **开始关注 AI** — 通过公众号、AI 社群等渠道获取 AI 前沿资讯，建立信息输入体系
+- **2024 初** | **系统化学习** — 通过 waytoagi、YouTube/B站订阅、凤九歌公众号等渠道深度学习 AI 知识与实践
 - **2024 中** | **扣子平台实践** — 基于扣子（Coze）平台搭建 AI Bot，探索自动化工作流
 - **2024 下** | **飞书 AI 集成** — 使用 OpenClaw 接入飞书，实现企业协作场景的 AI 赋能
 - **2025 初** | **AI 编程工具链** — 搭建 VSCode + Claude Code + DeepSeekV4Pro 开发环境，探索 AI 辅助编程

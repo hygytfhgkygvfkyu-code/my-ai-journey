@@ -1,16 +1,16 @@
 // 网站文案数据 — 此处修改内容无需改代码
 const siteData = {
   hero: {
-    name: "你的姓名",
-    title: "一句话简介 / Slogan",
-    dedication: "TO XX老师",
+    name: "刘露",
+    title: "世界是一场巨大的均值回归游戏",
+    dedication: "TO 赵嘉鑫老师",
     avatar: "assets/images/avatar.jpg"
   },
 
   about: {
-    text: "这里是个人简介。可以写一段简短介绍，让老师了解你的背景和方向。",
+    text: "天津商业大学本科在读，主修高等数学、概率论与数理统计、经济学原理、会计学、财务管理、市场营销、客户关系管理、招商引资概论、互联网+招商引资运营服务等课程，曾参加谷川培训学校TTT专项培训。我认为，AI 的意义不止于蒸汽机、电力、互联网那样的效率革命，它更是一场人类思维方式的变革。",
     education: [
-      { school: "学校名称", degree: "本科 / 硕士", major: "专业", time: "2020 - 2024" }
+      { school: "天津商业大学", degree: "本科", major: "经济学/商科", time: "在读" }
     ]
   },
 
@@ -32,7 +32,7 @@ const siteData = {
     {
       date: "2024 初",
       title: "系统化学习",
-      desc: "通过 waytoagi、YouTube/B站订阅、凤九歌公众号等渠道深度学习 AI 知识与实践"
+      desc: "通过 waytoagi社区、YouTube/B站订阅、等渠道深度学习 AI 知识与实践，并创立凤九歌公众号内化和输出所学内容"
     },
     {
       date: "2024 中",
@@ -57,8 +57,8 @@ const siteData = {
   ],
 
   contact: {
-    email: "your-email@example.com",
-    wechat: "你的微信号",
-    github: "https://github.com/your-username"
+    email: "scl0607ll@163.com",
+    wechat: "hba324",
+    github: "https://github.com/hygytfhgkygvfkyu-code"
   }
 };

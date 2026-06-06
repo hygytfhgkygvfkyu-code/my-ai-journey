@@ -59,7 +59,7 @@
           : multiImg
             ? `<div class="carousel" data-carousel>
                 <div class="carousel-track">
-                  ${images.map(src => `<div class="carousel-slide"><img src="${src}" alt=""></div>`).join('')}
+                  ${images.map(src => `<div class="carousel-slide"><img src="${src}" alt="" onclick="openLightbox(this.src)"></div>`).join('')}
                 </div>
                 <button class="carousel-btn carousel-prev"><i data-lucide="chevron-left" size="18"></i></button>
                 <button class="carousel-btn carousel-next"><i data-lucide="chevron-right" size="18"></i></button>
@@ -67,7 +67,7 @@
                   ${images.map((_, idx) => `<span class="carousel-dot${idx === 0 ? ' active' : ''}" data-index="${idx}"></span>`).join('')}
                 </div>
               </div>`
-            : `<img src="${images[0]}" alt="${meta.name}" style="width:100%;height:100%;object-fit:cover;">`;
+            : `<img src="${images[0]}" alt="${meta.name}" onclick="openLightbox(this.src)" style="width:100%;height:100%;object-fit:cover;cursor:pointer;">`;
 
         grid.insertAdjacentHTML('beforeend',
           `<div class="project-card">
@@ -184,7 +184,7 @@
           }
 
           const imgHTML = imgs.length
-            ? `<div class="timeline-images">${imgs.map(src => `<img src="${src}" alt="">`).join('')}</div>`
+            ? `<div class="timeline-images">${imgs.map(src => `<img src="${src}" alt="" onclick="openLightbox(this.src)" style="cursor:pointer;">`).join('')}</div>`
             : '';
 
           container.insertAdjacentHTML('beforeend',
