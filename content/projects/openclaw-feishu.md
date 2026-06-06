@@ -7,4 +7,3 @@ images: content/projects/image/openclaw-feishu/1780729473299.png, content/projec
 
 使用 OpenClaw 接入飞书，实现企业协作场景的 AI 赋能。
 
-（待补充：项目背景、技术方案、成果）

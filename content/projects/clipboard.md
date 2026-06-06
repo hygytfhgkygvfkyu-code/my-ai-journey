@@ -7,4 +7,3 @@ images: content/projects/image/clipboard/1780725528528.png, content/projects/ima
 
 开发粘贴板工具，提升日常工作效率。
 
-（待补充：项目背景、技术方案、成果）

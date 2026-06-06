@@ -7,4 +7,3 @@ images: content/projects/image/tianshang-website/1780730043828.png, content/proj
 
 天商网站的设计与开发。
 
-（待补充：项目背景、技术方案、成果）

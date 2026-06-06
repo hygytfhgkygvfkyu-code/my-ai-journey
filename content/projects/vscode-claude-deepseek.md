@@ -7,4 +7,3 @@ images: content/projects/image/vscode-claude-deepseek/1780730109542.png, content
 
 搭建 VSCode + Claude Code + DeepSeekV4Pro 开发环境，探索 AI 辅助编程的最佳实践。
 
-（待补充：项目背景、技术方案、成果）

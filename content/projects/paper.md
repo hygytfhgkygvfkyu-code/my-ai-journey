@@ -7,4 +7,3 @@ images: content/projects/image/paper/1780729778717.png, content/projects/image/p
 
 AI 相关论文研究与探索。
 
-（待补充：论文方向、研究内容、成果）
